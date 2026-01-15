@@ -92,24 +92,11 @@ def neopixel_animated_display(n, ring1, ring2):
 
 #region: PROGRAM FOR TESTING PURPOSES ONLY --------------------------------------------------
 
-if __name__ == "__main__":
-    #neopixel_temp()
-    #neopixel_humidity()
-    #neopixel_pressure()
-    #neopixel_wind_speed()
-    #neopixel_few_clouds()
-    #neopixel_clouds()
-    #neopixel_thunderstorm()
-    #neopixel_atmosphere()
-    
+if __name__ == "__main__": 
     n = 0
     for i in range(10):
         n +=1
-        #neopixel_drizzle(n)
-        #neopixel_snow(n)
-        #neopixel_rain(n)
-        #neopixel_sunshine(n)
-        #neopixel_moon(n)
+        neopixel_animated_display(n,RING_SUNSHINE_1,RING_SUNSHINE_2)
         time.sleep(0.5)
-
+    clear_light()
 #endregion ----------------------------------------------------------------------------------
