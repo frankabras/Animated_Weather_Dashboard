@@ -116,7 +116,8 @@ if __name__ == "__main__":
     print()
     
     # Data update and logging
-    r = data_update(wlan, lcd)
+    location = ["5.581565690222564", "50.6202012460474"]
+    r = data_update(lcd, location[0], location[1])
     weather_forecast = data_logging(r,0)
     
     # Displaying logged data in the console
