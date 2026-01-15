@@ -48,7 +48,7 @@ def time_selector(timer):
 # FUNCTION: Update weather data from OpenWeatherMap API
 def uptade_weather(timer):                                                                      # CHANGE: function name typo
     global r
-    r = data_update(wlan,lcd, location[0], location[1])
+    r = data_update(lcd, location[0], location[1])
 
 # FUNCTION: Display weather data and alerts
 def display_weather(timer):
@@ -77,7 +77,7 @@ def display_weather(timer):
  ) = hardware_setup()
 
 # Datas logging
-r = data_update(wlan,lcd, location[0], location[1])
+r = data_update(lcd, location[0], location[1])
 weather_forecast = data_logging(r,timeSelector)
 
 # Datas display

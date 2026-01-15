@@ -135,7 +135,6 @@ def read_time_selector(pot,lcd):
             lcd.move_to(0,0)
             lcd.putstr("Now")
         elif day == 0:
-            msgHours = "In",hour,"hours"                                                        # QUESTIONABLE : What is this line for ?
             lcd.move_to(0,0)
             lcd.putstr("In")
             lcd.move_to(3,0)

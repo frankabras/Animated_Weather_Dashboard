@@ -9,8 +9,8 @@ from hardware_setup import *
 import utime
 
 #region: FUNCTIONS DEFINITION ---------------------------------------------------------------
-# FUNCTION: Uptade weather data from OpenWeatherMap API
-def data_update(wlan,lcd, lon, lat):                                                            # QUESTIONABLE: wlan argument not used ?
+# FUNCTION: Uptade weather data from OpenWeatherMap API with hhtps request
+def data_update(lcd, lon, lat):                                                            # QUESTIONABLE: wlan argument not used ?
     # Display update in progress on LCD
     lcd.clear()
     lcd.move_to(0,0)
@@ -19,16 +19,15 @@ def data_update(wlan,lcd, lon, lat):                                            
     # Query OpenWeatherMap API for weather data
     root_url = "https://api.openweathermap.org/data/2.5/forecast?"
     url = root_url+"lat="+lat+"&lon="+lon+"&appid=" \
-        +my_logging["OWM_API_key"]+"&units=metric"   # CHANGE: line length
-    r = urequests.get(url)                                      # Query openweather in http
+        +my_logging["OWM_API_key"]+"&units=metric"
+    r = urequests.get(url)
 
     # Display update is done on LCD
     lcd.clear()
     lcd.move_to(0,0)
     lcd.putstr("  Data updated")
     utime.sleep(0.5)
-    
-    lcd.clear()                                                                                 # QUESTIONABLE: Why clear here?
+    lcd.clear()
 
     return r
 
