@@ -9,8 +9,8 @@ from hardware_setup import *
 import utime
 
 #region: FUNCTIONS DEFINITION ---------------------------------------------------------------
-# FUNCTION: Uptade weather data from OpenWeatherMap API with hhtps request
-def data_update(lcd, lon, lat):                                                            # QUESTIONABLE: wlan argument not used ?
+# FUNCTION: Uptade weather data from OpenWeatherMap API with https request
+def data_update(lcd, lon, lat):
     # Display update in progress on LCD
     lcd.clear()
     lcd.move_to(0,0)
@@ -33,7 +33,7 @@ def data_update(lcd, lon, lat):                                                 
 
 # FUNCTION: Log weather data from OpenWeatherMap API
 def data_logging(r,time):
-    # Conversion of json data into a dictionnary
+    # Conversion of json data into a dictionary
     dict = r.json()
     
     # Logging data into a list for further use
@@ -126,7 +126,7 @@ if __name__ == "__main__":
     print("Location:",weather_forecast[0])
     print("Location:",dict["list"][0]["dt"])  #Convertir exemple : 1670598000
     print("Type of weather: ",weather_forecast[1])
-    print("Descprition of weather: ",weather_forecast[2])
+    print("Description of weather: ",weather_forecast[2])
     print("Rain probability: ",round(weather_forecast[3]*100,1),"%")
     print("Current temperature: ",round(weather_forecast[4]-273.15,1),"°C")
     print("Minimum temperature today: ",round(weather_forecast[5]-273.15,1),"°C")

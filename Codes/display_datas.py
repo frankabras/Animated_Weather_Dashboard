@@ -22,7 +22,7 @@ cntSnow = 0
 
 #region: FUNCTIONS DEFINITION ---------------------------------------------------------------
 
-# ===== FUNCTIONS FOR DISPLAY ========================================================
+# ===== FUNCTIONS FOR DISPLAY ===============================================================
 # FUNCTION: Display weather data through hardware components
 def display_data(menuCounter,weather_forecast,lcd,servo):
     global cntSunshine,cntDrizzle,cntRain,cntSnow
