@@ -46,7 +46,7 @@ def time_selector(timer):
     timeSelector = read_time_selector(pot,lcd)
     
 # FUNCTION: Update weather data from OpenWeatherMap API
-def update_weather(timer):                                                                      # CHANGE: function name typo
+def update_weather(timer):
     global r
     r = data_update(lcd, location[0], location[1])
 

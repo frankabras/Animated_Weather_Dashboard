@@ -73,7 +73,7 @@ PURPLE = (128,0,128)
 #endregion ----------------------------------------------------------------------------------
 
 
-#region: COLOR MAPS DEFINITION --------------------------------------------------------------  # CHANGE: lines length
+#region: COLOR MAPS DEFINITION --------------------------------------------------------------
 
 # Ring temperature
 RING_TEMPERATURE = [MIDNIGHT_BLUE,BLUE,ROYAL_BLUE,CORNFLOWER_BLUE,WHITE,LIGHT_YELLOW,LIGHT_ORANGE,ORANGE_RED, \
