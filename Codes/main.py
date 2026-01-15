@@ -6,8 +6,8 @@
 import sys
 sys.path.append('lcd')
 from hardware_setup import *
-from datas_logging import *
-from display_datas import *
+from data_logging import *
+from display_data import *
 from machine import Pin, Timer
 
 #region: GLOBAL CONSTANTS AND VARIABLES -----------------------------------------------------

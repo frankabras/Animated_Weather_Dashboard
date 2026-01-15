@@ -1,10 +1,10 @@
 # -------------------------------------------------------------------------------------------
-# File : display_datas.py
+# File : display_data.py
 # Desc : This file contains functions to display weather data on the LCD and control the
 #        servo and neopixel ring
 # -------------------------------------------------------------------------------------------
 from hardware_setup import *
-from datas_logging import *
+from data_logging import *
 from neopixel_ring import *
 
 #region: GLOBAL CONSTANTS AND VARIABLES -----------------------------------------------------
