@@ -12,7 +12,7 @@ import rp2
 
 # ===== VARIABLES ===========================================================================
 NUM_LEDS = 16                                   # Number of neopixels in the ring
-PIN_NUM = 17                                    # Pin where the neopixel ring is connected
+PIN_NUM = 1                                     # Pin where the neopixel ring is connected
 brightness = 0.02                               # from 0 to 1 -> take care, 1 is very bright!
 
 #endregion ----------------------------------------------------------------------------------
