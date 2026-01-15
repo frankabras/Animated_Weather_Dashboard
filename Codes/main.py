@@ -63,7 +63,18 @@ def display_weather(timer):
 
 # ===== Initializations =====================================================================
 # Setup
-wlan,lcd,bckl,servo,pot,menuButton,LED_freezingAlert,LED_rainAlert,LED_windAlert,LED_heatAlert = hardware_setup()  # CHANGE: line length
+(
+    wlan,
+    lcd,
+    bckl,
+    servo,
+    pot,
+    menuButton,
+    LED_freezingAlert,
+    LED_rainAlert,
+    LED_windAlert,
+    LED_heatAlert
+ ) = hardware_setup()
 
 # Datas logging
 r = data_update(wlan,lcd, location[0], location[1])

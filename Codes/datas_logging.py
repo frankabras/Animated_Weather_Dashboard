@@ -18,7 +18,8 @@ def data_update(wlan,lcd, lon, lat):                                            
 
     # Query OpenWeatherMap API for weather data
     root_url = "https://api.openweathermap.org/data/2.5/forecast?"
-    url = root_url+"lat="+lat+"&lon="+lon+"&appid="+my_logging["OWM_API_key"]+"&units=metric"   # CHANGE: line length
+    url = root_url+"lat="+lat+"&lon="+lon+"&appid=" \
+        +my_logging["OWM_API_key"]+"&units=metric"   # CHANGE: line length
     r = urequests.get(url)                                      # Query openweather in http
 
     # Display update is done on LCD
@@ -59,7 +60,20 @@ def data_logging(r,time):
 
 if __name__ == "__main__":
     # Setup
-    wlan,lcd,bckl,servo,pot,menuButton,LED_freezingAlert,LED_rainAlert,LED_windAlert,LED_heatAlert = hardware_setup() # CHANGE: line length
+    (
+        wlan,
+        lcd,
+        bckl,
+        servo,
+        pot,
+        menuButton,
+        LED_freezingAlert,
+        LED_rainAlert,
+        LED_windAlert,
+        LED_heatAlert
+    ) = hardware_setup()
+    
+    
     wlan = network.WLAN(network.STA_IF) # Creates a WLAN object and initializes it
     wlan.active(True)
     wlan.connect(my_logging["ssid"],my_logging["WiFi_pass"])

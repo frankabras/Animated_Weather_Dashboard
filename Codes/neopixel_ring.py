@@ -22,7 +22,8 @@ brightness = 0.02                               # from 0 to 1 -> take care, 1 is
 
 # ===== FUNCTIONS FOR PIO ===================================================================
 # FUNCTION: PIO assembly code to drive the WS2812 LEDs
-@rp2.asm_pio(sideset_init=rp2.PIO.OUT_LOW, out_shiftdir=rp2.PIO.SHIFT_LEFT, autopull=True, pull_thresh=24)  # CHANGE: line length
+@rp2.asm_pio(sideset_init=rp2.PIO.OUT_LOW, out_shiftdir=rp2.PIO.SHIFT_LEFT, \
+             autopull=True, pull_thresh=24)
 def ws2812():
     T1 = 2
     T2 = 5

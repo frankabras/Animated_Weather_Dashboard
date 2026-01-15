@@ -106,7 +106,18 @@ def hardware_setup():
         utime.sleep(1)
     utime.sleep(5)
     
-    return wlan,lcd,bckl,servo,pot,BP_menu,LED_freezingAlert,LED_rainAlert,LED_windAlert,LED_heatAlert # CHANGE : line length
+    return (
+        wlan,
+        lcd,
+        bckl,
+        servo,
+        pot,
+        BP_menu,
+        LED_freezingAlert,
+        LED_rainAlert,
+        LED_windAlert,
+        LED_heatAlert
+    )
 
 # ===== FUNCTIONS FOR HARDWARE CONTROL ======================================================
 # FUNCTION: Read the value of the potentiometer and display the selected time range on LCD
@@ -196,7 +207,18 @@ def set_servo_position(servo,position):
 #region: PROGRAM FOR TESTING PURPOSES ONLY --------------------------------------------------
 
 if __name__ == "__main__":
-    wlan,lcd,bckl,servo,pot,BP_menu,LED_freezingAlert,LED_rainAlert,LED_windAlert,LED_heatAlert = hardware_setup() # CHANGE : line length
+    (
+        wlan,
+        lcd,
+        bckl,
+        servo,
+        pot,
+        menuButton,
+        LED_freezingAlert,
+        LED_rainAlert,
+        LED_windAlert,
+        LED_heatAlert
+    ) = hardware_setup()
     
     print("Connection to WiFi network.")
     print("---------------------------")
