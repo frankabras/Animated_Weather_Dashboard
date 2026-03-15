@@ -4,7 +4,7 @@
 # -------------------------------------------------------------------------------------------
 
 from machine import Pin, ADC, I2C, PWM
-from logging import *
+from secrets import *
 from color_map import *
 import network
 import array, time,utime
@@ -72,7 +72,7 @@ def hardware_setup():
     # Create and connect WLAN object
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
-    wlan.connect(my_logging["ssid"],my_logging["WiFi_pass"])
+    wlan.connect(my_secrets["ssid"],my_secrets["WiFi_pass"])
     
     # Checking WiFi connection status
     retry = 10

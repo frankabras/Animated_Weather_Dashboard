@@ -4,7 +4,7 @@
 # -------------------------------------------------------------------------------------------
 
 import urequests, network
-from logging import *
+from secrets import *
 from hardware_setup import *
 import utime
 
@@ -19,7 +19,7 @@ def data_update(lcd, lon, lat):
     # Query OpenWeatherMap API for weather data
     root_url = "https://api.openweathermap.org/data/2.5/forecast?"
     url = root_url+"lat="+lat+"&lon="+lon+"&appid=" \
-        +my_logging["OWM_API_key"]+"&units=metric"
+        +my_secrets["OWM_API_key"]+"&units=metric"
     r = urequests.get(url)
 
     # Display update is done on LCD
