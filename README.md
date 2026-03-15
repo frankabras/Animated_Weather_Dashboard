@@ -53,9 +53,9 @@ The MicroPython codebase is highly modular. All source files are located in the 
    git clone https://github.com/frankabras/Animated_Weather_Dashboard.git
    ```
 3. **Configure Credentials:**
-   Create a `logging.py` file inside the `Codes/` directory (or update the existing one) with your Wi-Fi credentials and API key:
+   Create a `secrets.py` file inside the `Codes/` directory (or update the existing one) with your Wi-Fi credentials and API key:
    ```python
-   my_logging = {
+   my_secrets = {
        "ssid": "Your_WiFi_SSID",
        "WiFi_pass": "Your_WiFi_Password",
        "OWM_API_key": "Your_OpenWeatherMap_API_Key"
